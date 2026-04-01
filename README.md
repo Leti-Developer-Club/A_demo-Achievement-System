@@ -18,13 +18,12 @@ If it finds a match, it adds progress.
 Once the math hits the goal, it tells the UI to show up on screen
 
 4. The Visuals (AchievementNotification.cs)
-Following the handbook's "No Early Polish" rule, I kept this "Ugly but Functional."
 The Manager puts the achievement data into the Notification panel.
 Performant Animations: Instead of heavy Update() calls I used Coroutines for the "Slide & Fade" effect.
 Lifecycle Management: Per the handbook, I properly manage these coroutines (caching and stopping) to prevent memory leaks.
 
 5. Persistence & Serialization (Save System)
-Following the Handbook's rule on "Data handled separately from game mechanics," I implemented a JSON-based Save System.
+I implemented a JSON-based Save System.
 JSON Serialization: I use JsonUtility to shrink live data into a string.
 PlayerPrefs Storage: This string is stored in a persistent "locker" (PlayerPrefs), ensuring player progress survives app restarts without bloating the ScriptableObject assets.
  
