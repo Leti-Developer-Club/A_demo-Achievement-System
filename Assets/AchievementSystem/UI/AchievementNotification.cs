@@ -21,17 +21,25 @@ namespace LetiArts.Systems.Achievements
             canvasGroup = GetComponent<CanvasGroup>();
             rectTransform = GetComponent<RectTransform>();
             canvasGroup.alpha = 0;
-            panel.SetActive(false);
         }
 
+        private void OnEnable()
+        {
+            GameEvents.OnAchievementUnlocked += ShowAchievement;
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.OnAchievementUnlocked -= ShowAchievement;
+        }
 
         public void ShowAchievement(AchievementEntry data)
         {
             txt_title.text = data.title;
             img_Icon.sprite = data.icon;
 
-            panel.SetActive(true);
-            StopAllCoroutines();
+            canvasGroup.alpha = 1;
+            StopAllCoroutines();  // good practice 
             StartCoroutine(AnimateNotification());
 
         }
@@ -41,12 +49,13 @@ namespace LetiArts.Systems.Achievements
             Vector2 settledPosition = new Vector2(0, -100); // final position of the notification panel
             Vector2 hiddenPosition = new Vector2(0, 100); // off screen position of the panel
 
-            rectTransform.anchoredPosition = hiddenPosition;  
+            rectTransform.anchoredPosition = hiddenPosition;  // putting our panel in the initial position we want it to be
 
             // Slide down & Fade in
             float elapsed = 0;
             float duration = 0.6f;
 
+            // Area of concern
             while (elapsed < duration) // loop that runs until the animation duration is reached
             {
                 elapsed += Time.deltaTime;  // making elapsed time use accurate time, independent of frame rate
@@ -62,7 +71,7 @@ namespace LetiArts.Systems.Achievements
             yield return new WaitForSeconds(2.5f);
 
             // Fade out
-            elapsed = 0;
+            elapsed = 0;  // set elapsed timer back to 0 after first half of animation
 
             while (elapsed < duration) 
             {
@@ -74,15 +83,8 @@ namespace LetiArts.Systems.Achievements
                 yield return null;
 
             }
-
-            HidePanel();
+            canvasGroup.alpha = 0;
         }
-
-        private void HidePanel()
-        {
-            panel.SetActive(false);
-        }
-
     }
 
 }
