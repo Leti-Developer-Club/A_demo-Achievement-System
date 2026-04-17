@@ -19,60 +19,60 @@ MonoBehaviour:
     description: Click the Cupid button 3 times.
     icon: {fileID: 21300000, guid: f8f915819cc90d6499a73101d0f0dc1b, type: 3}
     goalValue: 3
-    currentProgress: 3
-    isUnlocked: 1
-    reward: {fileID: 11400000, guid: 3b772c4c4b616ce49abe00a6899d186c, type: 2}
+    currentProgress: 0
+    isUnlocked: 0
+    reward: {fileID: 0}
   - AchTargetAction: 2
     id: btn_level_complete_5
     title: High Five
     description: Successfully complete 5 levels.
     icon: {fileID: 21300000, guid: f8f915819cc90d6499a73101d0f0dc1b, type: 3}
     goalValue: 5
-    currentProgress: 5
-    isUnlocked: 1
-    reward: {fileID: 11400000, guid: f09539fcf6e32414bb3fbd3095b2cfae, type: 2}
+    currentProgress: 0
+    isUnlocked: 0
+    reward: {fileID: 0}
   - AchTargetAction: 3
     id: btn_perfect_first_try
     title: First Time's A Charm
     description: Earn 3 stars on your very first try.
     icon: {fileID: 21300000, guid: f8f915819cc90d6499a73101d0f0dc1b, type: 3}
     goalValue: 1
-    currentProgress: 1
-    isUnlocked: 1
-    reward: {fileID: 11400000, guid: 12253e6294b102444a4912427930f709, type: 2}
+    currentProgress: 0
+    isUnlocked: 0
+    reward: {fileID: 0}
   - AchTargetAction: 4
     id: btn_streak_3star_5
     title: Speed Runner
     description: Complete 5 levels in a row with 3 stars.
     icon: {fileID: 21300000, guid: f8f915819cc90d6499a73101d0f0dc1b, type: 3}
     goalValue: 5
-    currentProgress: 5
-    isUnlocked: 1
-    reward: {fileID: 11400000, guid: f09539fcf6e32414bb3fbd3095b2cfae, type: 2}
+    currentProgress: 0
+    isUnlocked: 0
+    reward: {fileID: 0}
   - AchTargetAction: 5
     id: btn_find_hidden_5
     title: Treasure Hunter
     description: Locate 5 hidden items on the map.
     icon: {fileID: 21300000, guid: f8f915819cc90d6499a73101d0f0dc1b, type: 3}
     goalValue: 5
-    currentProgress: 5
-    isUnlocked: 1
-    reward: {fileID: 11400000, guid: f09539fcf6e32414bb3fbd3095b2cfae, type: 2}
+    currentProgress: 0
+    isUnlocked: 0
+    reward: {fileID: 0}
   - AchTargetAction: 6
     id: btn_solve_no_hint
     title: Pattern Master
     description: Complete a level without using a single hint
     icon: {fileID: 21300000, guid: f8f915819cc90d6499a73101d0f0dc1b, type: 3}
     goalValue: 1
-    currentProgress: 1
-    isUnlocked: 1
-    reward: {fileID: 11400000, guid: 3b772c4c4b616ce49abe00a6899d186c, type: 2}
+    currentProgress: 0
+    isUnlocked: 0
+    reward: {fileID: 0}
   - AchTargetAction: 7
     id: btn_read_books_5
     title: Bookworm
     description: Knowledge is power! Read 5 different books.
     icon: {fileID: 21300000, guid: f8f915819cc90d6499a73101d0f0dc1b, type: 3}
     goalValue: 5
-    currentProgress: 5
-    isUnlocked: 1
-    reward: {fileID: 11400000, guid: 3b772c4c4b616ce49abe00a6899d186c, type: 2}
+    currentProgress: 0
+    isUnlocked: 0
+    reward: {fileID: 0}

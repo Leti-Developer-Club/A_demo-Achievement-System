@@ -17,7 +17,7 @@ public class AchievementTrackerWindow : EditorWindow
         GetWindow<AchievementTrackerWindow>("Achievements Tracker");
     }
 
-    // Area of concern
+   
     private void OnEnable()
     {
         if (ach_Library == null)
@@ -72,7 +72,7 @@ public class AchievementTrackerWindow : EditorWindow
         {   
             // If player doesn't search for anything, no condition gets fulfilled here, therefore, skip this condition and draw all achievements.
             if (!string.IsNullOrEmpty(searchString) && !ach.title.ToLower().Contains(searchString.ToLower()))
-            {continue;} // if search string dey and achievement title no contain am, skip this one
+            {continue;} 
 
             if (currentTab == 1 && !ach.isUnlocked) 
             {continue;} // if the Unlocked tab is selected but the achievement is not unlocked, skip this entry
